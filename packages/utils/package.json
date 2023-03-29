@@ -6,9 +6,9 @@
   "private": true,
   "scripts": {
     "dev": "pnpm build --watch",
-    "build": "rm -fr dist/* && tsc",
+    "build": "rimraf dist && tsc",
     "lint": "TIMING=1 eslint \"**/*.{ts,tsx,js,jsx}\" --fix",
-    "clean": "rm -rf ./dist && rm -rf .turbo"
+    "clean": "rimraf dist && rm -rf .turbo"
   },
   "sideEffects": false,
   "type": "module",
@@ -42,6 +42,7 @@
   ],
   "devDependencies": {
     "eslint": "^8.11.0",
+    "rimraf": "^4.4.1",
     "typescript": "^5.0.2"
   }
 }
