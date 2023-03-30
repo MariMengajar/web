@@ -12,14 +12,15 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.4.0",
-    "@mentora/ui": "workspace:*",
-    "@mentora/utils": "workspace:*",
     "@mentora/firebase": "workspace:*",
     "@mentora/store": "workspace:*",
+    "@mentora/ui": "workspace:*",
+    "@mentora/utils": "workspace:*",
     "@tailwindcss/forms": "^0.5.3",
     "next": "13.2.4",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "reactfire": "^4.2.2"
   },
   "devDependencies": {
     "@types/node": "^18.0.0",

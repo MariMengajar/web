@@ -7,7 +7,7 @@ import {
   getAuth,
 } from 'firebase/auth';
 
-import { config } from 'firebaseConfig';
+import { config } from './firebaseConfig';
 
 const mentoraFirebase = initializeApp(config);
 
