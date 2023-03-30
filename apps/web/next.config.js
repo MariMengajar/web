@@ -1,6 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  transpilePackages: ['@marimengajar/ui'],
-}
+  transpilePackages: ['@mentora/ui'],
+  images: {
+    domains: ['images.unsplash.com', 'raw.githubusercontent.com'],
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

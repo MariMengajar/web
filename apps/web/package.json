@@ -1,8 +1,8 @@
 {
-  "name": "app",
+  "name": "web",
   "version": "0.0.0",
   "repository": "https://github.com/MariMengajar/web.git",
-  "license": "MIT",
+  "license": "AGPLV3",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -11,9 +11,10 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@marimengajar/ui": "workspace:*",
-    "@marimengajar/utils": "workspace:*",
-    "@vercel/examples-ui": "^1.0.4",
+    "@fortawesome/fontawesome-free": "^6.4.0",
+    "@mentora/ui": "workspace:*",
+    "@mentora/utils": "workspace:*",
+    "@tailwindcss/forms": "^0.5.3",
     "next": "13.2.4",
     "react": "18.2.0",
     "react-dom": "18.2.0"
