@@ -1,0 +1,52 @@
+{
+  "name": "@mentora/firebase",
+  "version": "0.0.1",
+  "repository": "https://github.com/MariMengajar/web.git",
+  "license": "AGPLV3",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm build --watch",
+    "build": "rimraf dist && tsc",
+    "lint": "TIMING=1 eslint \"**/*.{ts,tsx,js,jsx}\" --fix",
+    "clean": "rimraf dist && rimraf .turbo"
+  },
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": "./dist/index.js",
+    "./*": [
+      "./dist/*.js",
+      "./dist/*/index.js"
+    ]
+  },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "src/*",
+        "src/*/index"
+      ]
+    }
+  },
+  "publishConfig": {
+    "typesVersions": {
+      "*": {
+        "*": [
+          "dist/*.d.ts",
+          "dist/*/index.d.ts"
+        ]
+      }
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "eslint": "^8.11.0",
+    "rimraf": "^4.4.1",
+    "typescript": "^5.0.2"
+  },
+  "dependencies": {
+    "firebase": "^9.18.0"
+  }
+}
