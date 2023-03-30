@@ -1,18 +1,19 @@
-'use client'
+'use client';
+
 import Image from 'next/image';
-import useUserStore from '@mentora/store'
-import { auth, signInGoogleWithPopup, signOut } from "@mentora/firebase"
+import useUserStore from '@mentora/store';
+import { signInGoogleWithPopup, signOut } from '@mentora/firebase';
 
 export default function SignInButton() {
-  const userState = useUserStore((state: any) => state.user)
+  const userState = useUserStore((state: any) => state.user);
 
   const handleLogin = () => {
-    signInGoogleWithPopup()
-  }
+    signInGoogleWithPopup();
+  };
 
   const handleLogout = () => {
-    signOut()
-  }
+    signOut();
+  };
   return (
     <div className='btn-wrapper text-center'>
       {!userState ? (
@@ -21,13 +22,7 @@ export default function SignInButton() {
           type='button'
           onClick={handleLogin}
         >
-          <Image
-            alt='...'
-            className='w-5 mr-1'
-            src='/img/google.svg'
-            width={20}
-            height={20}
-          />
+          <Image alt='...' className='w-5 mr-1' src='/img/google.svg' width={20} height={20} />
           Google
         </button>
       ) : (
@@ -40,5 +35,5 @@ export default function SignInButton() {
         </button>
       )}
     </div>
-  )
+  );
 }
