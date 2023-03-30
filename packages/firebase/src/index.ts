@@ -1,4 +1,5 @@
 import { initializeApp } from "firebase/app";
+import { GoogleAuthProvider, User, onAuthStateChanged, signInWithPopup, getAuth } from "firebase/auth"
 
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
@@ -11,4 +12,12 @@ const firebaseConfig = {
 };
 
 const mentoraFirebase = initializeApp(firebaseConfig);
+
+export const auth = getAuth(mentoraFirebase)
+export const googleProvider = new GoogleAuthProvider()
+export const signInGoogleWithPopup = () => { signInWithPopup(auth, googleProvider) }
+export const signOut = () => { auth.signOut() }
+export { onAuthStateChanged }
+export type { User }
+
 export default mentoraFirebase

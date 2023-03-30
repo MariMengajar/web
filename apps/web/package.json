@@ -15,6 +15,7 @@
     "@mentora/ui": "workspace:*",
     "@mentora/utils": "workspace:*",
     "@mentora/firebase": "workspace:*",
+    "@mentora/store": "workspace:*",
     "@tailwindcss/forms": "^0.5.3",
     "next": "13.2.4",
     "react": "18.2.0",
