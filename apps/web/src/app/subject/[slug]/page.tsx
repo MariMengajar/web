@@ -1,4 +1,4 @@
-import useFetchSubject from 'src/lib/firestore/use-fetch-subject';
+import useFetchSubject from '~/lib/firestore/use-fetch-subject';
 
 export default function Subject({ params }: { params: { slug: string } }) {
   const { data: subject, status } = useFetchSubject(params.slug);
