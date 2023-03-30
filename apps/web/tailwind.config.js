@@ -5,11 +5,7 @@ const colors = require('tailwindcss/colors');
 module.exports = {
   presets: [ui],
   // `ui.content` includes a path to the components that are using tailwind in @mentora/ui
-  content: ui.content.concat([
-    './pages/**/*.{js,ts,jsx,tsx}',
-    './components/**/*.{js,ts,jsx,tsx}',
-    './node_modules/@vercel/examples-ui/**/*.js',
-  ]),
+  content: ui.content.concat(['./src/pages/**/*.{js,ts,jsx,tsx}']),
   theme: {
     extend: {
       minHeight: {
