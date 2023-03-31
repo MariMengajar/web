@@ -5,6 +5,7 @@ interface SubjectProps {
   imageSrc: string;
   description: string;
   tags: string[];
+  slug: string;
 }
 
 const SubjectCard = (props: SubjectProps) => {
@@ -23,7 +24,7 @@ const SubjectCard = (props: SubjectProps) => {
         <h3 className='text-2xl font-semibold text-gray-800'>{props.title}</h3>
         <h4 className='text-sm font-thin text-gray-500'>{props.tags.join(' ')}</h4>
         <p className='mt-6 mb-8 text-gray-600'>{props.description.substring(0, 100)}</p>
-        <a className='inline-block' href='#'>
+        <a className='inline-block' href={props.slug}>
           <span className='text-primary'>Join</span>
         </a>
       </div>

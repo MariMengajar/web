@@ -1,7 +1,11 @@
 import { DocumentReference, Timestamp } from 'firebase/firestore';
 
-export interface User {
+export interface WithId<T> {
   id: string;
+  data: T;
+}
+
+export interface User {
   username: string;
   accountType: 'mentor' | 'mentee';
   status: 'active' | 'inactive' | 'suspended';
@@ -9,7 +13,6 @@ export interface User {
 }
 
 export interface Subject {
-  id: string;
   slug: string;
   title: string;
   description: string;

@@ -5,7 +5,7 @@ export default async function SubjectCatalogue() {
   const subjects = await fetchAllSubjects();
 
   return (
-    <div className='py-12'>
+    <div className='py-32'>
       <div className='xl:container m-auto px-6 text-gray-600 md:px-12 xl:px-6'>
         <div className='mb-12 space-y-2 text-center'>
           <h2 className='text-3xl font-bold text-gray-800 md:text-4xl'>Subjects</h2>
@@ -18,10 +18,11 @@ export default async function SubjectCatalogue() {
           {subjects.map(subject => (
             <SubjectCard
               key={subject.id}
-              title={subject.title}
+              title={subject.data.title}
               imageSrc='https://images.unsplash.com/photo-1491895200222-0fc4a4c35e18?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80'
-              description={subject.description}
-              tags={subject.tags}
+              description={subject.data.description}
+              tags={subject.data.tags}
+              slug={'/subjects/' + subject.data.slug}
             />
           ))}
         </div>

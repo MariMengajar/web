@@ -1,5 +1,5 @@
 import { db, collection, getDocs, query, where, SUBJECTS_COLLECTION, SUBJECT_KEY } from '../';
-import type { Subject } from '../';
+import type { Subject, WithId } from '../';
 
 export async function fetchSubjectBySlug(subjectSlug: string) {
   const q = query(collection(db, SUBJECTS_COLLECTION), where(SUBJECT_KEY.SLUG, '==', subjectSlug));
@@ -11,17 +11,23 @@ export async function fetchSubjectBySlug(subjectSlug: string) {
     throw new Error('There are no subjects with this slug');
   }
 
-  const subject = querySnapshot.docs[0].data() as Subject;
+  const subject: WithId<Subject> = {
+    id: querySnapshot.docs[0].id,
+    data: querySnapshot.docs[0].data() as Subject,
+  };
 
   return subject;
 }
 
 export async function fetchAllSubjects() {
-  const subjects: Subject[] = [];
+  const subjects: WithId<Subject>[] = [];
   const querySnapshot = await getDocs(collection(db, SUBJECTS_COLLECTION));
 
   querySnapshot.forEach(doc => {
-    subjects.push(doc.data() as Subject);
+    subjects.push({
+      id: doc.id,
+      data: doc.data() as Subject,
+    });
   });
 
   return subjects;

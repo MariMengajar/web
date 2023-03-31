@@ -5,9 +5,9 @@ export default async function Subject({ params }: { params: { slug: string } }) 
 
   return (
     <>
-      <h1>{subject.title}</h1>
-      <h3>{subject.scheduledDate.toDate().toLocaleDateString()}</h3>
-      <p>{subject.description}</p>
+      <h1>{subject.data.title}</h1>
+      <h3>{subject.data.scheduledDate.toDate().toLocaleDateString()}</h3>
+      <p>{subject.data.description}</p>
     </>
   );
 }
