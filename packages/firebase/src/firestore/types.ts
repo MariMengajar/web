@@ -1,4 +1,4 @@
-import { DocumentReference } from 'firebase/firestore';
+import { DocumentReference, Timestamp } from 'firebase/firestore';
 
 export interface User {
   id: string;
@@ -13,7 +13,7 @@ export interface Subject {
   slug: string;
   title: string;
   description: string;
-  scheduledDate: Date;
+  scheduledDate: Timestamp;
   tags: string[];
   status: 'active' | 'inactive';
   mentorId: DocumentReference;

@@ -1,4 +1,0 @@
-const USERS_COLLECTION = 'users';
-const SUBJECTS_COLLECTION = 'subjects';
-
-export { USERS_COLLECTION, SUBJECTS_COLLECTION };

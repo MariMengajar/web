@@ -35,4 +35,5 @@ const db = getFirestore(app);
 export { collection, getDoc, getDocs, query, where } from 'firebase/firestore';
 export { db };
 export * from './firestore/types';
-export * from './firestore/collections';
+export * from './firestore/constants';
+export * from './firestore/utils';
