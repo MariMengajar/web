@@ -1,4 +1,4 @@
-export default function FooterSmall({ absolute }: { absolute?: boolean }) {
+const FooterSmall = ({ absolute }: { absolute?: boolean }) => {
   return (
     <footer className={(absolute ? 'absolute w-full bottom-0 bg-slate-800' : 'relative') + ' pb-6'}>
       <div className='container mx-auto px-4'>
@@ -55,4 +55,6 @@ export default function FooterSmall({ absolute }: { absolute?: boolean }) {
       </div>
     </footer>
   );
-}
+};
+
+export default FooterSmall;
