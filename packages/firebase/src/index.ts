@@ -2,12 +2,13 @@ import { config } from './firebaseConfig';
 import { initializeApp } from 'firebase/app';
 import {
   GoogleAuthProvider,
-  User,
   onAuthStateChanged,
   signInWithPopup,
   getAuth,
 } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
+
+import type { User } from "firebase/auth"
 
 const app = initializeApp(config);
 export default app;
@@ -17,22 +18,24 @@ export default app;
 // =================
 const auth = getAuth(app);
 const googleProvider = new GoogleAuthProvider();
-const signInGoogleWithPopup = () => {
-  signInWithPopup(auth, googleProvider);
+const signInWithGooglePopup = async () => {
+  await signInWithPopup(auth, googleProvider);
 };
-const signOut = () => {
+const signOut = async () => {
   auth.signOut();
 };
 
-export { auth, onAuthStateChanged, signInGoogleWithPopup, signOut };
-export type { User };
+type FirebaseUser = User
+
+export type { FirebaseUser }
+export { auth, onAuthStateChanged, signInWithGooglePopup, signOut };
 
 // =================
 // Firestore API
 // =================
 const db = getFirestore(app);
 
-export { collection, getDoc, getDocs, query, where } from 'firebase/firestore';
+export { collection, getDoc, getDocs, setDoc, doc, query, where } from 'firebase/firestore';
 export { db };
 export * from './firestore/types';
 export * from './firestore/constants';
