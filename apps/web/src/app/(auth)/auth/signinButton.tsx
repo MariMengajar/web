@@ -7,20 +7,20 @@ import { useRouter } from 'next/navigation';
 
 export default function SignInButton() {
   const { user, loading, signIn, signOut } = useUserStore();
-  const router = useRouter()
+  const router = useRouter();
 
   useEffect(() => {
     if (user) {
-      router.push("/")
+      router.push('/');
     }
-  }, [user])
+  }, [user, router]);
 
   if (loading) {
     return (
       <div className='btn-wrapper text-center'>
         <h1 className='text-lg'>Loading...</h1>
       </div>
-    )
+    );
   }
   return (
     <div className='btn-wrapper text-center'>

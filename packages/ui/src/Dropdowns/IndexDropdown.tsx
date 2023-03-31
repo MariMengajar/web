@@ -51,7 +51,7 @@ const IndexDropdown = () => {
           href='/admin/dashboard'
           className='text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-slate-700'
         >
-          Mentor's Bio
+          Mentor&apos;s Bio
         </Link>
         <Link
           href='/subjects'
