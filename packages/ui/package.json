@@ -40,6 +40,7 @@
   "dependencies": {
     "@popperjs/core": "^2.11.7",
     "@swc/helpers": "^0.4.12",
+    "@mentora/store": "workspace:*",
     "clsx": "^1.1.1"
   },
   "devDependencies": {

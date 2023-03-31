@@ -31,7 +31,7 @@ const IndexDropdown = () => {
           dropdownPopoverShow ? closeDropdownPopover() : openDropdownPopover();
         }}
       >
-        Demo Pages
+        Features
       </a>
       <div
         ref={popoverDropdownRef}
@@ -45,31 +45,31 @@ const IndexDropdown = () => {
             'text-sm pt-2 pb-0 px-4 font-bold block w-full whitespace-nowrap bg-transparent text-slate-400'
           }
         >
-          Admin Layout
+          Program
         </span>
         <Link
           href='/admin/dashboard'
           className='text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-slate-700'
         >
-          Dashboard
+          Mentor's Bio
         </Link>
         <Link
-          href='/admin/settings'
+          href='/subjects'
           className='text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-slate-700'
         >
-          Settings
+          Vote A Subject
         </Link>
         <Link
           href='/admin/tables'
           className='text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-slate-700'
         >
-          Tables
+          Scheduling
         </Link>
         <Link
           href='/admin/maps'
           className='text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-slate-700'
         >
-          Maps
+          Ranking System
         </Link>
         <div className='h-0 mx-4 my-2 border border-solid border-slate-100' />
         <span
@@ -77,19 +77,19 @@ const IndexDropdown = () => {
             'text-sm pt-2 pb-0 px-4 font-bold block w-full whitespace-nowrap bg-transparent text-slate-400'
           }
         >
-          Auth Layout
+          Account
         </span>
         <Link
           href='/auth/login'
           className='text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-slate-700'
         >
-          Login
+          Mentor
         </Link>
         <Link
           href='/auth/register'
           className='text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-slate-700'
         >
-          Register
+          Mentee
         </Link>
         <div className='h-0 mx-4 my-2 border border-solid border-slate-100' />
         <span
@@ -97,13 +97,13 @@ const IndexDropdown = () => {
             'text-sm pt-2 pb-0 px-4 font-bold block w-full whitespace-nowrap bg-transparent text-slate-400'
           }
         >
-          No Layout
+          Others
         </span>
         <Link
           href='/landing'
           className='text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-slate-700'
         >
-          Landing
+          Home
         </Link>
         <Link
           href='/profile'

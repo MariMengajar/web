@@ -7,6 +7,7 @@ import {
   getAuth,
 } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
+import { getStorage } from 'firebase/storage'
 
 import type { User } from "firebase/auth"
 
@@ -40,3 +41,10 @@ export { db };
 export * from './firestore/types';
 export * from './firestore/constants';
 export * from './firestore/utils';
+
+// =================
+// Cloud Storage API
+// =================
+const storage = getStorage()
+
+export { storage }
