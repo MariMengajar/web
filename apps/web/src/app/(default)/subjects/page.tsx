@@ -3,6 +3,9 @@ import { fetchAllSubjects } from '@mentora/firebase';
 
 export default async function SubjectCatalogue() {
   const subjects = await fetchAllSubjects();
+  subjects.sort(
+    (a, b) => b.data.scheduledDate.toDate().getTime() - a.data.scheduledDate.toDate().getTime(),
+  );
 
   return (
     <div className='py-32'>
