@@ -15,3 +15,14 @@ export async function fetchSubjectBySlug(subjectSlug: string) {
 
   return subject;
 }
+
+export async function fetchAllSubjects() {
+  const subjects: Subject[] = [];
+  const querySnapshot = await getDocs(collection(db, SUBJECTS_COLLECTION));
+
+  querySnapshot.forEach(doc => {
+    subjects.push(doc.data() as Subject);
+  });
+
+  return subjects;
+}
