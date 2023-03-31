@@ -3,9 +3,6 @@ import { fetchAllSubjects } from '@mentora/firebase';
 
 export default async function SubjectCatalogue() {
   const subjects = await fetchAllSubjects();
-  subjects.sort(
-    (a, b) => b.data.scheduledDate.toDate().getTime() - a.data.scheduledDate.toDate().getTime(),
-  );
 
   return (
     <div className='py-32'>
@@ -21,11 +18,11 @@ export default async function SubjectCatalogue() {
           {subjects.map(subject => (
             <SubjectCard
               key={subject.id}
-              title={subject.data.title}
+              title={subject.title}
               imageSrc='https://images.unsplash.com/photo-1491895200222-0fc4a4c35e18?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80'
-              description={subject.data.description}
-              tags={subject.data.tags}
-              slug={'/subjects/' + subject.data.slug}
+              description={subject.description}
+              tags={subject.tags}
+              slug={'/subjects/' + subject.slug}
             />
           ))}
         </div>

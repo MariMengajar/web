@@ -1,4 +1,13 @@
-import { db, collection, getDocs, query, where, SUBJECTS_COLLECTION, SUBJECT_KEY } from '../';
+import {
+  db,
+  collection,
+  getDocs,
+  query,
+  orderBy,
+  where,
+  SUBJECTS_COLLECTION,
+  SUBJECT_KEY,
+} from '../';
 import type { Subject, WithId } from '../';
 
 export async function fetchSubjectBySlug(subjectSlug: string) {
@@ -13,20 +22,21 @@ export async function fetchSubjectBySlug(subjectSlug: string) {
 
   const subject: WithId<Subject> = {
     id: querySnapshot.docs[0].id,
-    data: querySnapshot.docs[0].data() as Subject,
+    ...(querySnapshot.docs[0].data() as Subject),
   };
 
   return subject;
 }
 
 export async function fetchAllSubjects() {
-  const subjects: WithId<Subject>[] = [];
-  const querySnapshot = await getDocs(collection(db, SUBJECTS_COLLECTION));
+  const q = query(collection(db, SUBJECTS_COLLECTION), orderBy(SUBJECT_KEY.SCHEDULEDDATE, 'desc'));
+  const querySnapshot = await getDocs(q);
 
+  const subjects: WithId<Subject>[] = [];
   querySnapshot.forEach(doc => {
     subjects.push({
       id: doc.id,
-      data: doc.data() as Subject,
+      ...(doc.data() as Subject),
     });
   });
 

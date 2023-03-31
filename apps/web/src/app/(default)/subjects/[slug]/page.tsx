@@ -9,7 +9,7 @@ export default async function Subject({ params }: { params: { slug: string } }) 
     return { first: words.join(' '), last: lastWord };
   };
 
-  const { first, last } = splitLastWord(subject.data.title);
+  const { first, last } = splitLastWord(subject.title);
 
   return (
     <div className='border-b py-16'>
@@ -27,10 +27,10 @@ export default async function Subject({ params }: { params: { slug: string } }) 
             </h1>
             <div className='mt-8 lg:mt-16 space-y-8'>
               <p className='text-gray-700'>
-                Date: {subject.data.scheduledDate.toDate().toLocaleDateString()}
+                Date: {subject.scheduledDate.toDate().toLocaleDateString()}
               </p>
-              <p className='text-gray-700'>Tags: {subject.data.tags.join(' ')}</p>
-              <p className='text-gray-700'>{subject.data.description}</p>
+              <p className='text-gray-700'>Tags: {subject.tags.join(' ')}</p>
+              <p className='text-gray-700'>{subject.description}</p>
               <div className='flex space-x-4 mt-6'>
                 <button
                   type='button'

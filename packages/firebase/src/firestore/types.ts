@@ -1,18 +1,15 @@
 import { DocumentReference, Timestamp } from 'firebase/firestore';
 
-export interface WithId<T> {
-  id: string;
-  data: T;
-}
+export type WithId<T> = T & { id: string };
 
-export interface User {
+export type User = {
   username: string;
   accountType: 'mentor' | 'mentee';
   status: 'active' | 'inactive' | 'suspended';
   biodata: string;
-}
+};
 
-export interface Subject {
+export type Subject = {
   slug: string;
   title: string;
   description: string;
@@ -21,4 +18,4 @@ export interface Subject {
   status: 'active' | 'inactive';
   mentorId: DocumentReference;
   participantIds: DocumentReference[];
-}
+};
