@@ -1,3 +1,5 @@
+import { DocumentReference } from 'firebase/firestore';
+
 export interface User {
   id: string;
   username: string;
@@ -8,11 +10,12 @@ export interface User {
 
 export interface Subject {
   id: string;
+  slug: string;
   title: string;
   description: string;
   scheduledDate: Date;
   tags: string[];
   status: 'active' | 'inactive';
-  mentorId: string;
-  participantIds: string[];
+  mentorId: DocumentReference;
+  participantIds: DocumentReference[];
 }

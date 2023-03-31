@@ -1,3 +1,4 @@
+import { config } from './firebaseConfig';
 import { initializeApp } from 'firebase/app';
 import {
   GoogleAuthProvider,
@@ -6,20 +7,32 @@ import {
   signInWithPopup,
   getAuth,
 } from 'firebase/auth';
+import { getFirestore } from 'firebase/firestore';
 
-import { config } from './firebaseConfig';
+const app = initializeApp(config);
+export default app;
 
-const mentoraFirebase = initializeApp(config);
-
-export const auth = getAuth(mentoraFirebase);
-export const googleProvider = new GoogleAuthProvider();
-export const signInGoogleWithPopup = () => {
+// =================
+// Auth API
+// =================
+const auth = getAuth(app);
+const googleProvider = new GoogleAuthProvider();
+const signInGoogleWithPopup = () => {
   signInWithPopup(auth, googleProvider);
 };
-export const signOut = () => {
+const signOut = () => {
   auth.signOut();
 };
-export { onAuthStateChanged };
+
+export { auth, onAuthStateChanged, signInGoogleWithPopup, signOut };
 export type { User };
 
-export default mentoraFirebase;
+// =================
+// Firestore API
+// =================
+const db = getFirestore(app);
+
+export { collection, getDoc, getDocs, query, where } from 'firebase/firestore';
+export { db };
+export * from './firestore/types';
+export * from './firestore/collections';
