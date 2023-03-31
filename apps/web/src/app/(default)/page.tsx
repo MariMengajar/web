@@ -18,14 +18,14 @@ export default function Index() {
               </p>
               <div className='mt-12'>
                 <a
-                  href='https://www.creative-tim.com/learning-lab/tailwind/nextjs/overview/notus?ref=nnjs-index'
+                  href='#'
                   target='_blank'
                   className='get-started text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-slate-400 active:bg-slate-500 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150'
                 >
                   CHECK MENTOR&apos;S BIO
                 </a>
                 <a
-                  href='https://github.com/creativetimofficial/notus-nextjs?ref=nnjs-index'
+                  href='#'
                   className='github-star ml-1 text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-slate-700 active:bg-slate-600 uppercase text-sm shadow hover:shadow-lg'
                   target='_blank'
                 >
@@ -177,7 +177,7 @@ export default function Index() {
                 </span>
               </div>
               <a
-                href='https://www.creative-tim.com/learning-lab/tailwind/nextjs/alerts/notus?ref=nnjs-index'
+                href='#'
                 target='_blank'
                 className='font-bold text-slate-700 hover:text-slate-500 ease-linear transition-all duration-150'
               >
@@ -204,94 +204,76 @@ export default function Index() {
             <div className='w-full md:w-6/12 px-4 mr-auto ml-auto mt-32'>
               <div className='justify-center flex flex-wrap relative'>
                 <div className='my-4 w-full lg:w-6/12 px-4'>
-                  <a
-                    href='https://www.creative-tim.com/learning-lab/tailwind/svelte/alerts/notus?ref=vtw-index'
-                    target='_blank'
-                  >
+                  <a href='#' target='_blank'>
                     <div className='bg-red-600 shadow-lg rounded-lg text-center p-8'>
                       <Image
                         alt='...'
                         className='shadow-md rounded-full max-w-full w-24 mx-auto p-2 bg-white'
                         src='/img/bahasa.jpg'
-                        width={48}
-                        height={48}
+                        width={96}
+                        height={96}
                       />
                       <p className='text-lg text-white mt-4 font-semibold'>Language</p>
                     </div>
                   </a>
-                  <a
-                    href='https://www.creative-tim.com/learning-lab/tailwind/react/alerts/notus?ref=vtw-index'
-                    target='_blank'
-                  >
+                  <a href='#' target='_blank'>
                     <div className='bg-sky-500 shadow-lg rounded-lg text-center p-8 mt-8'>
                       <Image
                         alt='...'
                         className='shadow-md rounded-full max-w-full w-24 mx-auto p-2 bg-white'
                         src='/img/ipa.jpg'
-                        width={48}
-                        height={48}
+                        width={96}
+                        height={96}
                       />
                       <p className='text-lg text-white mt-4 font-semibold'>Science</p>
                     </div>
                   </a>
-                  <a
-                    href='https://www.creative-tim.com/learning-lab/tailwind/nextjs/alerts/notus?ref=vtw-index'
-                    target='_blank'
-                  >
+                  <a href='#' target='_blank'>
                     <div className='bg-slate-700 shadow-lg rounded-lg text-center p-8 mt-8'>
                       <Image
                         alt='...'
                         className='shadow-md rounded-full max-w-full w-24 mx-auto p-2 bg-white'
                         src='/img/mtk.jpg'
-                        width={48}
-                        height={48}
+                        width={96}
+                        height={96}
                       />
                       <p className='text-lg text-white mt-4 font-semibold'>Math</p>
                     </div>
                   </a>
                 </div>
                 <div className='my-4 w-full lg:w-6/12 px-4 lg:mt-16'>
-                  <a
-                    href='https://www.creative-tim.com/learning-lab/tailwind/js/alerts/notus?ref=vtw-index'
-                    target='_blank'
-                  >
+                  <a href='#' target='_blank'>
                     <div className='bg-yellow-500 shadow-lg rounded-lg text-center p-8'>
                       <Image
                         alt='...'
                         className='shadow-md rounded-full max-w-full w-24 mx-auto p-2 bg-white'
                         src='/img/finance.jpg'
-                        width={48}
-                        height={48}
+                        width={96}
+                        height={96}
                       />
                       <p className='text-lg text-white mt-4 font-semibold'>Finance</p>
                     </div>
                   </a>
-                  <a
-                    href='https://www.creative-tim.com/learning-lab/tailwind/angular/alerts/notus?ref=vtw-index'
-                    target='_blank'
-                  >
+                  <a href='#' target='_blank'>
                     <div className='bg-red-700 shadow-lg rounded-lg text-center p-8 mt-8'>
                       <Image
                         alt='...'
                         className='shadow-md rounded-full max-w-full w-24 mx-auto p-2 bg-white'
                         src='/img/coding.jpg'
-                        width={48}
-                        height={48}
+                        width={96}
+                        height={96}
                       />
                       <p className='text-lg text-white mt-4 font-semibold'>Coding</p>
                     </div>
                   </a>
-                  <a
-                    href='https://www.creative-tim.com/learning-lab/tailwind/vue/alerts/notus?ref=vtw-index'
-                    target='_blank'
-                  >
+                  <a href='#' target='_blank'>
                     <div className='bg-emerald-500 shadow-lg rounded-lg text-center p-8 mt-8'>
                       <Image
                         alt='...'
                         className='shadow-md rounded-full max-w-full w-24 mx-auto p-2 bg-white'
                         src='/img/trading.jpg'
-                        width={48}
-                        height={48}
+                        width={96}
+                        height={96}
                       />
                       <p className='text-lg text-white mt-4 font-semibold'>Trading</p>
                     </div>
@@ -340,7 +322,7 @@ export default function Index() {
                 </span>
               </div>
               <a
-                href='https://www.creative-tim.com/learning-lab/tailwind/nextjs/alerts/notus?ref=nnjs-index'
+                href='#'
                 target='_blank'
                 className='font-bold text-slate-700 hover:text-slate-500 ease-linear transition-all duration-150'
               >
@@ -564,14 +546,14 @@ export default function Index() {
               </p>
               <div className='sm:block flex flex-col mt-10'>
                 <a
-                  href='https://www.creative-tim.com/learning-lab/tailwind/nextjs/overview/notus?ref=nnjs-index'
+                  href='#'
                   target='_blank'
                   className='get-started text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-2 bg-slate-400 active:bg-slate-500 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150'
                 >
                   CHECK MENTOR&apos;S BIO
                 </a>
                 <a
-                  href='https://github.com/creativetimofficial/notus-nextjs?ref=nnjs-index'
+                  href='#'
                   target='_blank'
                   className='github-star sm:ml-1 text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-slate-700 active:bg-slate-600 uppercase text-sm shadow hover:shadow-lg'
                 >
