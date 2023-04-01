@@ -1,14 +1,9 @@
-import {
-  db,
-  collection,
-  getDocs,
-  query,
-  orderBy,
-  where,
-  SUBJECTS_COLLECTION,
-  SUBJECT_KEY,
-} from '../';
-import type { Subject, WithId } from '../';
+import type { Subject, WithId, User } from './types';
+import type { FirebaseUser } from '../auth/types';
+
+import { db } from '../';
+import { SUBJECTS_COLLECTION, SUBJECT_KEY } from './constants';
+import { getDocs, getDoc, query, collection, where, orderBy, setDoc, doc } from './libs';
 
 export async function fetchSubjectBySlug(subjectSlug: string) {
   const q = query(collection(db, SUBJECTS_COLLECTION), where(SUBJECT_KEY.SLUG, '==', subjectSlug));
@@ -41,4 +36,22 @@ export async function fetchAllSubjects() {
   });
 
   return subjects;
+}
+
+export async function fetchDBUserByAuthUser(authUser: FirebaseUser | null) {
+  if (!authUser) return null;
+
+  const userRef = doc(db, 'users', authUser.uid);
+  const userDoc = await getDoc(userRef);
+  if (!userDoc.exists()) {
+    const newUser: User = {
+      username: authUser.displayName!,
+      accountType: 'mentee',
+      status: 'active',
+      biodata: '',
+    };
+
+    await setDoc(userRef, newUser);
+  }
+  return userDoc.data() as User;
 }

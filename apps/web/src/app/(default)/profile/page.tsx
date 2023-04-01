@@ -2,9 +2,10 @@
 import { useUserStore } from '@mentora/store';
 
 export default function Profile() {
-  const { user, signOut } = useUserStore();
+  const user = useUserStore(state => state.user);
+  const { signOut } = useUserStore(state => state.actions);
 
-  const handleSubmit = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
   };
 

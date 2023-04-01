@@ -9,7 +9,7 @@ import { useUserStore } from '@mentora/store';
 
 export default function Navbar() {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
-  const { user, signIn, signOut } = useUserStore();
+  const user = useUserStore(state => state.user);
   return (
     <>
       <nav className='top-0 fixed z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg bg-white shadow'>
@@ -87,13 +87,13 @@ export default function Navbar() {
                     </button>
                   </Link>
                 ) : (
-                  <button
+                  <Link
                     className='bg-slate-700 text-white active:bg-slate-600 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 ease-linear transition-all duration-150'
                     type='button'
-                    onClick={signIn}
+                    href='/auth'
                   >
                     <i className='fas fa-arrow-alt-circle-down' /> Sign In
-                  </button>
+                  </Link>
                 )}
               </li>
             </ul>

@@ -1,19 +1,10 @@
 'use client';
 
 import Image from 'next/image';
-import { useUserStore } from '@mentora/store';
-import { useEffect } from 'react';
-import { useRouter } from 'next/navigation';
+import { useSignIn } from '~/libs/hooks';
 
 export default function SignInButton() {
-  const { user, loading, signIn, signOut } = useUserStore();
-  const router = useRouter();
-
-  useEffect(() => {
-    if (user) {
-      router.push('/');
-    }
-  }, [user, router]);
+  const { user, loading, signIn, signOut } = useSignIn();
 
   if (loading) {
     return (
