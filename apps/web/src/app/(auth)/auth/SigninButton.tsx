@@ -1,10 +1,12 @@
 'use client';
 
 import Image from 'next/image';
-import { useSignIn } from '~/libs/hooks';
+import { useUserStore } from '@mentora/store';
 
 export default function SignInButton() {
-  const { user, loading, signIn, signOut } = useSignIn();
+  const user = useUserStore(state => state.user);
+  const loading = useUserStore(state => state.loading);
+  const { signIn, signOut } = useUserStore(state => state.actions);
 
   if (loading) {
     return (
