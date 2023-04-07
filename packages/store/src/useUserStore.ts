@@ -58,10 +58,3 @@ export const useUserStore = create<UserStore>()(set => {
     },
   };
 });
-
-// TODO: Move somewhere else or use next-auth https://next-auth.
-onAuthStateChanged(auth, async user => {
-  useUserStore.setState({ loading: true });
-  const userData = await fetchDBUserByAuthUser(user);
-  useUserStore.setState({ user: userData, loading: false });
-});
