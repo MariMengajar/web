@@ -14,10 +14,10 @@
     "clean": "turbo run clean"
   },
   "devDependencies": {
-    "dotenv-cli": "^7.1.0",
-    "eslint": "^8.37.0",
-    "eslint-config-turbo": "latest",
+    "dotenv-cli": "^7.2.1",
+    "eslint": "^8.38.0",
+    "eslint-config-turbo": "^1.9.3",
     "prettier": "^2.8.7",
-    "turbo": "^1.8.8"
+    "turbo": "^1.9.3"
   }
 }
